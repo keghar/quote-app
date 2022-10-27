@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First full stack app</title>
+</head>
+<body>
+    <p>This is my first app using frontend and back end. This uses Node, Express, MongoDB and EJS</p>
+
+    <h1>Good Quotes</h1>
+    <ul class="quotes">
+    <% for(let i=0; i < info.length; i++) {%>
+        <li class="quotes">
+            <span><%= info[i].name %></span>
+            <span><%= info[i].quote %></span>
+            <span>Likes: <%= info[i].likes %></span>
+            <button class="like-button">Like</button>
+           <button class="delete-button">Delete</button>
+        </li>
+    <% } %>
+    </ul>
+
+    <h2>Add a quote:</h2>
+
+    <form action="/addQuote" method="POST">
+        <input type="text" placeholder="Name" name="name">
+        <input type="text" placeholder="Quote" name="quote">
+        <input type="submit">
+    </form>
+
+      </ul>
+
+     
+
+      
+      
+      <script src="/main.js"></script>
+
+</body>
+</html>
